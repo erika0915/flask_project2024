@@ -1,0 +1,67 @@
+/* 전체 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* 네비게이션 바 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+}
+
+/* 로고 */
+.navbar_logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* 메뉴 항목 */
+.navbar_menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar_menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* 메뉴 아이템 호버 */
+.navbar_menu li a:hover {
+    color: #ff6347;
+}
+
+/* 모바일용 햄버거 버튼 */
+.navbar_tooleBtn {
+    display: none;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar_tooleBtn {
+        display: block;
+        cursor: pointer;
+    }
+}
