@@ -1,0 +1,30 @@
+{% extends "index.html"%}
+{% block section %}
+<p>
+    seller {{data.seller}} sells {{data.name}} and its category is {{data.category}}
+    this item is 
+    {%if data['status']=="lnew"%}
+    likely new! 
+    {%endif%}
+    {%if data['status']=="new"%}
+    new!
+    {%endif%}
+    {%if data['status']=="used"%}
+    used! 
+    {%endif%}
+</p>
+<img src="{{img_path}}"/>
+<p> 
+    contact via {{data.email}} or {{data.phone}} if you are interested! 
+    the address id {{data.addr}}
+</p>
+<p>
+    for payment, the credit card is 
+    {%if data['card']=="y"%}
+    accepted!
+    {%endif%}
+    {%if data['card']=="n"%}
+    not accepted!
+    {%endif%}
+</p>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+{% block section %}
+<form action="/submit_item_post" method="post" enctype="multipart/form-data">
+<div>
+    <br><br>
+    <label for ="name">item name: </label>
+    <input type="text" name="name" id="name" required>
+    <br><br>
+</div>
+<div>
+    <br><br>
+    <label for ="seller">seller id: </label>
+    <input type="text" name="seller" id="seller" required>
+    <br><br>
+</div>
+<div>
+    <br><br>
+    <label for ="addr">address: </label>
+    <input type="text" name="addr" id="addr" required>
+    <br><br>
+</div>
+<div>
+    <br><br>
+    <label for ="tel">email: </label>
+    <input type="text" name="email" id="email" required>
+    <br><br>
+</div>
+<div>
+    <label for ="category">category: </label><br>   
+    <select id="category" name="category">
+        <option value="clothes" selected>clothes</option>
+        <option value="beauty">beauty</option>
+        <option value="books">books</option>
+        <option value="furnitures">furnitures</option>
+        <option value="electronics">electronics</option>
+        <option value="etc">etc</option>
+    </select><br><br>
+</div>
+<div>
+    <label for ="card">credit card? (y/n) : </label><br>
+    <select id="card" name="card"> 
+        <option value="y" selected>yes</option>
+        <option value="x">no</option>
+    </select><br><br>
+</div>
+<div>
+    <label for="img">representative image upload : </label>
+    <input type=file name="file"><br><br>
+</div>
+<div>
+    <label for="status">status? </label><br>
+    <select id="status" name="status">
+        <option value="new" selected>new</option>
+        <option value="lnew">likely new</option>
+        <option value="used">used</option>
+    </select><br><br>
+</div>
+<div>
+    <label for="phone">phone : </label>
+    <input type="text" name="phone" id="phone"><br><br>
+</div>
+<div>
+    <input type="submit" value="submit"><br><br>
+</div>
+</form>
+{% endblock %}
